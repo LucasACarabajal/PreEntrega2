@@ -1,38 +1,39 @@
 @charset "UTF-8";
+body {
+  font-family: "Righteous" cursive;
+  font-weight: 800;
+}
+
 /* nav-principal */
-.nav-principal {
+.nav {
   display: flex;
   justify-content: space-between;
-  background-color: blueviolet;
 }
 
-.nav-principal a {
+.nav a {
+  color: #777377;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
-  color: green;
-  text-decoration: none;
+  text-decoration-line: overline;
+  text-decoration-color: #701065;
   font-size: 1.1rem;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
-.nav-principal a:hover {
-  background-color: cyan;
-  color: black;
+.nav a:hover {
+  color: #FF911B;
+  text-decoration-line: underline;
+  text-decoration-color: #FF911B;
 }
 
 /* img principal */
 .zapas {
-  background-image: url(../img/zapas.jpg);
+  background-image: url(../img/fondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 450px;
   position: relative;
   width: 100%;
-}
-
-.contenido-zapas div {
-  color: blueviolet;
-  font-size: 1.5rem;
 }
 
 .contenido-zapas {
@@ -46,29 +47,23 @@
   justify-content: center;
 }
 
-body {
-  font-family: "Righteous" cursive;
-  font-weight: 800;
-  background-image: linear-gradient(to top, #701065 0%, var(--fondo) 100%);
+.contenido-zapas h2 {
+  padding: 80px;
+  color: #12ECC4;
+  font-size: 1.8rem;
 }
 
-/* pagina principañ */
-h2 {
-  padding: 80px;
-  color: blueviolet;
-  text-align: center;
-  font-size: 1.8rem;
+.contenido-zapas div {
+  color: #12ECC4;
+  font-size: 1.5rem;
+  right: 20%;
 }
 
 h2 span {
   font-size: 1.4rem;
 }
 
-.logo {
-  color: blueviolet;
-  text-decoration: none;
-}
-
+/* pagina principal */
 /* diseño de imagenes-letras catalogo*/
 .logo {
   text-align: center;
@@ -81,31 +76,131 @@ h2 span {
 }
 
 /* diseño de tarjetas */
-.card-airforce {
-  padding: 0%;
+.card {
+  display: flex;
+  padding-top: 1rem;
+  font-size: small;
+  padding: 1rem;
   width: 300px;
+  border-radius: 40px;
+  box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+}
+
+.card-segunda {
   left: 50px;
-}
-
-.card-airmax {
-  width: 400px;
-  padding: auto;
-}
-
-.card-cortez {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: small;
+  padding: 1.5rem;
   width: 300px;
-  left: 150px;
-  padding: 0%;
+  box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
 }
 
-@media (max-width: 800px) {
-  .nav-principal {
+.col-una {
+  padding: 5px;
+}
+
+.col-dos {
+  align-items: center;
+  padding: 30px;
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .img-carusel {
+    width: 50%;
+    margin: auto;
+  }
+  .img-carusel .card, .img-carusel .card-segunda {
+    display: grid;
   }
 }
-.pag-principal {
+.img-carusel {
+  padding: 3rem;
   left: 25%;
-  width: 50%;
+  width: 55%;
+}
+
+footer {
+  display: grid;
+  background-color: black;
+  flex-direction: column;
+  padding-top: 10px;
+}
+footer .redes {
+  text-align: center;
+}
+footer p {
+  color: aliceblue;
+}
+footer .icon {
+  height: 30px;
+  width: 50px;
+  color: aliceblue;
+}
+
+/*catalogo*/
+.catalogo {
+  display: grid;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 10px 25px 10px;
+  grid-template-columns: auto auto auto;
+}
+
+.catalogo div {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.img-catalogo {
+  border-radius: 20px;
+  height: 250px;
+  width: 250px;
+}
+
+.catalogo p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+.catalogo a {
+  color: #fff;
+  background-color: red;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 3px 5px;
+  border-radius: 10px;
+  align-self: flex-end;
+  margin-right: 10px;
+}
+
+.catalogo a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.sobremi {
+  display: flex;
+}
+
+.nosotros {
+  width: 400px;
+  height: 700px;
+}
+
+.nosotros h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  justify-content: center;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
